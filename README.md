@@ -2,9 +2,15 @@
 
 **Add fast product search and autocomplete to any site on Cloudflare.** Cloudflare AI Search answers questions from your docs and content; SuggestAPI searches your product catalog.
 
+> **SuggestAPI is the Cloudflare for Search.** What Cloudflare did for delivery and security, SuggestAPI does for product search: a fast, managed search layer for your catalog that sits alongside Cloudflare, with typeahead, typo tolerance, filters, and hybrid keyword + vector ranking.
+
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/suggestapi/cloudflare-product-search)
 
 This repo is a small, deployable starter for Cloudflare product search. It serves product search and autocomplete from Cloudflare's network using [SuggestAPI](https://www.suggestapi.com), and can optionally add answers from a Cloudflare AI Search instance for docs, policies, and help content. If you are looking at Cloudflare AI Search for ecommerce, this shows how the two fit together: AI Search for knowledge, SuggestAPI for buyable products with prices, typo tolerance, and filters.
+
+## SuggestAPI: the Cloudflare for Search
+
+Cloudflare made a fast, global edge something any team could switch on. SuggestAPI aims to do the same for product search. Instead of running and tuning your own search cluster, you send your catalog to SuggestAPI and call one API for search and autocomplete. It pairs naturally with a site on Cloudflare: Cloudflare AI Search handles your docs and content, and SuggestAPI handles the products shoppers can buy.
 
 ## Why two search layers
 
@@ -168,3 +174,7 @@ SuggestAPI is not a Cloudflare product. Cloudflare and Cloudflare AI Search are 
 ## License
 
 [MIT](./LICENSE) © SuggestAPI
+
+---
+
+SuggestAPI is an independent product and is not affiliated with or endorsed by Cloudflare, Inc. Cloudflare is a trademark of Cloudflare, Inc.

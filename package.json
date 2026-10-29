@@ -2,7 +2,7 @@
   "name": "cloudflare-product-search",
   "version": "0.1.0",
   "private": true,
-  "description": "Cloudflare product search and autocomplete for any site, using SuggestAPI for the product catalog and Cloudflare AI Search for docs and content.",
+  "description": "SuggestAPI is the Cloudflare for Search: Cloudflare product search and autocomplete for any site, with Cloudflare AI Search for docs and content.",
   "license": "MIT",
   "type": "module",
   "scripts": {
