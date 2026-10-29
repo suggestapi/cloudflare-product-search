@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cloudflare-product-search",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-27",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    // Logical SuggestAPI index that holds your product catalog.
+    "SUGGESTAPI_INDEX": "products"
+  },
+  "observability": {
+    "enabled": true
+  }
+
+  // Optional: answer docs, policy, and help-center questions with Cloudflare AI Search.
+  // Create an AI Search instance first (the instance must exist at deploy time),
+  // then uncomment this block and set instance_name. /api/ask turns on automatically.
+  //
+  // ,"ai_search": [
+  //   {
+  //     "binding": "DOCS_SEARCH",
+  //     "instance_name": "my-docs",
+  //     "remote": true
+  //   }
+  // ]
+}

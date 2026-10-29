@@ -1,0 +1,46 @@
+{
+  "name": "cloudflare-product-search",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Cloudflare product search and autocomplete for any site, using SuggestAPI for the product catalog and Cloudflare AI Search for docs and content.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "build": "wrangler deploy --dry-run --outdir dist",
+    "check": "npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@suggestapi/sdk": "^0.1.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261029.1",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.156.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "cloudflare",
+    "product-search",
+    "autocomplete",
+    "typeahead",
+    "ecommerce",
+    "cloudflare-ai-search",
+    "site-search",
+    "suggestapi"
+  ],
+  "cloudflare": {
+    "bindings": {
+      "SUGGESTAPI_PUBLIC_KEY": {
+        "description": "Your SuggestAPI public (search) key. Create one at [suggestapi.com](https://www.suggestapi.com)."
+      },
+      "SUGGESTAPI_INDEX": {
+        "description": "The SuggestAPI index that holds your product catalog, for example `products`."
+      }
+    }
+  }
+}
