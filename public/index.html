@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloudflare Product Search demo</title>
+  <meta name="description" content="Product search and autocomplete on Cloudflare, powered by SuggestAPI, with optional Cloudflare AI Search for docs.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Cloudflare Product Search</h1>
+    <p class="lede">Type to see autocomplete suggestions. Press Enter for full product results.</p>
+
+    <form id="search-form" role="search" autocomplete="off">
+      <div class="combobox">
+        <input id="q" name="q" type="search" placeholder="Search products…" aria-label="Search products"
+               role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suggestions">
+        <ul id="suggestions" role="listbox" hidden></ul>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <section aria-labelledby="products-heading">
+      <h2 id="products-heading" hidden>Products</h2>
+      <ul id="products" class="products"></ul>
+    </section>
+
+    <section id="docs-section" aria-labelledby="docs-heading" hidden>
+      <h2 id="docs-heading">From the docs</h2>
+      <ul id="docs" class="docs"></ul>
+    </section>
+  </main>
+  <footer>
+    Products by <a href="https://www.suggestapi.com">SuggestAPI</a>. Docs by Cloudflare AI Search.
+    <a href="https://github.com/suggestapi/cloudflare-product-search">Source</a>
+  </footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
